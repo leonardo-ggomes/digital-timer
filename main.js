@@ -7,7 +7,7 @@ let pane;
 document.addEventListener('DOMContentLoaded', () => {
   const timer = new DigitalTimer({
     container: '#timer',
-    isTimeNow: false,
+    isTimeNow: true,
     fontSize: 140,
     hours: 0,
     minutes: 0,
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
           expanded: false 
         });
 
-        folder.addBinding(params, 'Horas', { min: 0, max: 24, step: 1 });
+        folder.addBinding(params, 'Horas', { min: 0, max: 23, step: 1 });
         folder.addBinding(params, 'Minutos', { min: 0, max: 59, step: 1 });
         folder.addBinding(params, 'Segundos', { min: 0, max: 59, step: 1 });
         folder.addBinding(params, 'Fonte (px)', { min: 30, max: 180, step: 1 }).on('change', ev => {
